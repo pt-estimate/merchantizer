@@ -1,0 +1,4 @@
+merchantizer/load/*.csv
+*.metaflow
+*.ipynb_checkpoints
+*__MACOSX
