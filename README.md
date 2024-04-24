@@ -26,7 +26,7 @@ From within the downloaded repo, run the following to load the data for explorat
 
 ```zsh
 poetry shell
-python merchantizer/load/load.py run
+python merchantizer/load.py run
 jupyter-notebook merchantizer/load_discussion.ipynb
 ```
 
