@@ -1,4 +1,4 @@
-merchantizer/load/*.csv
+merchantizer/*.csv
 *.metaflow
 *.ipynb_checkpoints
 *__MACOSX

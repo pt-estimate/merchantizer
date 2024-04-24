@@ -3,8 +3,7 @@ Given a noisy set of transaction descriptions, leverage ML to predict a given tr
 
 ### Project Structure
 
-There are three folders here, each with a .py file where the work is carried out, and a jupyter notebook. I recommend walking through the notebooks first as commentary on decisions made. Then use the python code to dig in more.
-
+There are three parts to this work, each with a .py file where the work is carried out, and a jupyter notebook. I recommend walking through the notebooks first as commentary on decisions made. Then use the python code to dig in more.
 * load - Data download and initial data discovery
 * clean - Data cleaning in preparation for modeling
 * model - Data prep in support of modeling and merchant categorization
