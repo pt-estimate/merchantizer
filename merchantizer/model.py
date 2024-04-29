@@ -29,20 +29,13 @@ class MerchantModelFlow(FlowSpec):
         from sentence_transformers import SentenceTransformer
 
         run = Flow("DescriptionCleanFlow").latest_successful_run
+        zeroshot_topic_list = run.data.zs_topic_list
         cleaned_df = run.data.cleaned_df
         # TODO: Leverage gpu acceleration to improve sample size
         sampled_df = cleaned_df.sample(100000)
         sentence_model = SentenceTransformer("all-MiniLM-L6-v2")
         embeddings = sentence_model.encode(sampled_df["cleaned_description"] \
                                            .tolist(), show_progress_bar=False)
-
-        # We define a number of merchants that we know are in the documents
-        zeroshot_topic_list = ["square*","cashapp*","toast*","doordash*",
-                               "target","walmart","mcdonalds","apple","uber",
-                               "google","amazon","shell","circle-k","7-eleven",
-                               "dollargeneral","dollartree","familydollar",
-                               "lyft","tacobell","exxon","starbucks","chevron",
-                               "wendys","365-market"]
 
         # We fit our model using the zero-shot merchants
         # and we define a minimum similarity. For each document,
