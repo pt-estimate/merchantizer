@@ -31,6 +31,7 @@ def clean_description(description):
     description = re.sub(r"sq\w*","square ",description)
     description = re.sub(r"cash app","cashapp ",description)
     description = re.sub(r"dd\w*","doordash ",description)
+    description = re.sub(r"doordash*","doordash ",description)
     description = re.sub(r"tst*","toast ",description)
     description = re.sub(r".com\w*"," ",description)
     description = re.sub(r"qt\w*","non-merchant",description)
