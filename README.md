@@ -30,6 +30,10 @@ python merchantizer/load.py run
 jupyter-notebook merchantizer/load_discussion.ipynb
 ```
 
+##### To Leverage AWS Infra
+* [Create Cloud Formation Stack](https://outerbounds.com/engineering/deployment/aws-managed/cloudformation/)
+* [Configure Metaflow for AWS](https://outerbounds.com/engineering/operations/configure-metaflow/)
+
 ### Built With
 * [Poetry](https://python-poetry.org) - Dependency Management & Packaging
 * [Metaflow](https://metaflow.org) - Machine Learning Framework
