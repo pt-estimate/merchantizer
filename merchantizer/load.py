@@ -25,6 +25,7 @@ class TransactionLoadFlow(FlowSpec):
         import io
         import os
         import pandas as pd
+        import polars as pl
         import requests
         import zipfile
 
@@ -34,7 +35,7 @@ class TransactionLoadFlow(FlowSpec):
             z = zipfile.ZipFile(io.BytesIO(r.content))
             z.extractall()
 
-        self.df = pd.read_csv(FILENAME)
+        self.df = pl.read_csv(FILENAME, null_values="null", dtypes={'merchantZip':str})
         self.next(self.end)
 
     @step
